@@ -137,8 +137,6 @@ class AddressBook
         return "\nName:" + this.Name + " ,Address:" + this.address + " ,City:" + this.city + " ,State:" + this.state + " Zip:" + this.zip + " ,Phone:" + this.phone + ",Email:" + this.email;
     }
 }
-//UC3//
-
 let addressArr = new Array();
 try
 {
@@ -152,23 +150,20 @@ catch(ex)
 {
     console.error(ex);
 }
-//UC4//
 function SearchName(addressbook)
 {
-    if(addressbook.Name=="virat") return addressbook;
+    if(addressbook.Name=="karan") return addressbook;
 }
 let Result =addressArr.find(SearchName);
 console.log(" contact"+Result);
-//UC5//
 function DeleteAddress(addressbook)
 {
     let Res = SearchName(addressbook);
-    var index= addressArr.indexOf(res);
+    var index= addressArr.indexOf(Res);
     return index;
 }
 let deleteIndex=addressArr.find(DeleteAddress);
 console.log(addressArr.splice(deleteIndex,1)+" is deleted")
-//UC6//
 let n=0;
 function GetTotal(a)
 {
@@ -179,10 +174,9 @@ function GetTotal(a)
    return n;
 }
 console.log("number of saved contacts"+addressArr.reduce(GetTotal,0));
-//UC7//
 function Duplicate(a)
 {
-    if(a.Name.includes("rohit"));
+    if(a.Name.includes("Madhur"));
     ++n;
 return n;
 }
@@ -195,10 +189,8 @@ else if(count>1)
 {
     console.log(" exist duplicate contact");
 }
-//UC8//
 let InCity=addressArr.filter(a=>a.city.includes("mumbai"));
 console.log(" contact with same city"+InCity);
-//UC9//
  function Map(a){
 return a.city+ " "+a.Name;
 }
